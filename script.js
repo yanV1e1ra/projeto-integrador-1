@@ -1,4 +1,3 @@
-// Funções de CRUD usando localStorage
 const bookStorage = {
     getBooks: () => {
         const books = localStorage.getItem('books');
@@ -23,7 +22,7 @@ const bookStorage = {
     }
 };
 
-// Manipulação do DOM
+
 const bookForm = document.getElementById('bookForm');
 const booksContainer = document.getElementById('booksContainer');
 
@@ -33,8 +32,10 @@ function renderBooks() {
                 <div class="book-item">
                     <div>
                         <h3>${book.title}</h3>
-                        <p>Autor: ${book.author} • Ano: ${book.year} • ISBN: ${book.isbn}</p>
-                        <p>Status: ${book.status}</p>
+                        <p>
+                            • Autor: ${book.author}<br>  
+                            • Ano: ${book.year}</p>
+                        <p>${book.status}</p>
                     </div>
                     <div class="book-actions">
                         <button onclick="editBook(${book.id})">Editar</button>
@@ -69,7 +70,6 @@ bookForm.addEventListener('submit', (e) => {
         title: document.getElementById('title').value,
         author: document.getElementById('author').value,
         year: document.getElementById('year').value,
-        isbn: document.getElementById('isbn').value,
         status: document.getElementById('status').value
     };
 
@@ -79,5 +79,4 @@ bookForm.addEventListener('submit', (e) => {
     renderBooks();
 });
 
-// Inicialização
 renderBooks();
