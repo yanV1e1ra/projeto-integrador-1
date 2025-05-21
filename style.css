@@ -1,3 +1,23 @@
+header {
+    display: flex;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    background-color: #f8f9fa;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: auto;
+}
+
+.logo {
+    float: right;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+}
 body {
     font-family: Arial, sans-serif;
     max-width: 800px;
@@ -25,8 +45,7 @@ body {
     flex-direction: column;
 }
 
-input,
-select {
+input, select {
     padding: 8px;
     margin-top: 5px;
     border: 1px solid #ddd;
@@ -75,3 +94,10 @@ button:hover {
 .book-actions button.delete:hover {
     background-color: #d32f2f;
 }
+
+.pacifico-regular {
+font-family: "Pacifico", cursive;
+font-weight: 400;
+font-style: normal;
+}
+
