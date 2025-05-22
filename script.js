@@ -80,3 +80,6 @@ bookForm.addEventListener('submit', (e) => {
 });
 
 renderBooks();
+
+// JavaScript para obter e exibir o ano atual
+    document.getElementById('current-year').textContent = new Date().getFullYear();
